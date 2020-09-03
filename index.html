@@ -7,6 +7,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet" />
+
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/new_task.js"></script>
 </head>
 <body>
     
@@ -23,10 +26,10 @@
         <!-- Menu -->
         <div class="container__menu">
 
-            <div class="container__item all-tasks">Все задачи</div>
-            <div class="container__item open-tasks">Открытые задачи</div>
-            <div class="container__item closed-tasks">Завершённые задачи</div>
-            <div class="container__item today-tasks">На сегодня</div>
+            <div class="container__item--active all-tasks">Все задачи</div>
+            <div class="container__item--no-active open-tasks">Открытые задачи</div>
+            <div class="container__item--no-active closed-tasks">Завершённые задачи</div>
+            <div class="container__item--no-active today-tasks">На сегодня</div>
 
         </div>
         <!-- //Menu -->
@@ -34,8 +37,49 @@
         <!-- Content -->
         <div class="container__content">
 
-            <button class="btn">+ Новая задача</button>
-            <div class="container__line"></div>
+            <div class="container__new-task">
+                <button class="btn">+ Новая задача</button>
+                <input class="inp-task disabled" type="text" placeholder="Введите название задачи...">
+            </div>
+
+            <!-- List Tasks-->
+            <div class="list-tasks">
+
+                <div class="task">
+                    <div class="check--close"></div>
+                    <div class="task-item">
+                        <span class="name-task--close">Задача1</span>
+                        <div class="btn-task">
+                            <input class="trash" type="button" />
+                            <input class="arrow" type="button" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="task">
+                    <div class="check--open"></div>
+                    <div class="task-item">
+                        <span class="name-task--open">Задача2</span>
+                        <div class="btn-task">
+                            <input class="trash" type="button" />
+                            <input class="arrow" type="button" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="task">
+                    <div class="check--open"></div>
+                    <div class="task-item">
+                        <span class="name-task--open">Задача3</span>
+                        <div class="btn-task">
+                            <input class="trash" type="button" />
+                            <input class="arrow" type="button" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- //List Tasks-->
 
         </div>
         <!-- //Content -->
